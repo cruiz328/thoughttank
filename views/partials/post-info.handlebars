@@ -1,0 +1,16 @@
+<div class=" mt-2">
+    <article class="post card col-12">
+        <div class="title card-header">
+            <a class="post-title" href="/post/{{ id }}" target="_blank">{{ title }}</a>
+        </div>
+        <div class="card-body">
+            {{ post_body }}
+        </div>
+        <div class="meta">
+            {{ vote_count }} {{format_plural "like" vote_count}} by {{ user.username }} on
+            {{format_date created_at }}
+            |
+            <a href="/post/{{ id }}">{{ comments.length }} {{format_plural "comment" comments.length}}</a>
+        </div>
+    </article>
+</div>

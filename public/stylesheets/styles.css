@@ -1,0 +1,17 @@
+#banner {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#posts-li {
+    list-style: none;
+}
+
+.post-title {
+    text-decoration: none;
+    color: black;
+}
+
+#post-body, #edit-body, #comment-text{ 
+    height: 100px;
+}
+

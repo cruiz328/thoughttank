@@ -1,0 +1,33 @@
+
+  <div class="row d-flex justify-content-center mt-4">
+    <article class="col-10">
+        <h2>
+            Edit Post
+        </h2>
+            <form class="edit-post-form">
+                Title
+                    <div>
+                        <input name="post-title" class="col-6" type="text" value="{{post.title}}" />
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control" type="text" name="post-body" id="edit-body" value="{{post.post_body}}">
+                    </div>
+                    <br>
+                    <div>
+                        {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+                        |
+                        <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+                    </div>
+                <button class="btn btn-warning" type="submit">Save Post</button>
+                <button type="button" class="btn delete-post-btn btn btn-secondary">Delete post</button>
+            </form>
+    </article>
+</div>
+
+{{> comments post.comments}}
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

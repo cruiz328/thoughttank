@@ -1,0 +1,18 @@
+{{#each this}}
+<div class="row d-flex justify-content-end mt-2">
+    <div class="comments card col-sm-12 col-md-10">
+        <section class="comment">
+            <div class="meta card-header">
+            {{user.username}} 
+
+            {{format_date created_at}}
+            </div>
+            <div class="text card-body">
+                {{comment_text}}
+            </div>
+        </section>
+    </div>
+</div>
+{{/each}}
+
+
